@@ -9,22 +9,40 @@ package javaapplication13;
  *
  * @author obdulia
  */
-public class Incidencia {
-    private int idIncidencia;
+public class Viaje {
+    private int idViaje; 
+    private String fechaInicio;
+    private String fechaFin;
     private String nombre;
-    private int alumnoId;
-    private int responsableId;
-    private String descripcion;
+    private int presupuestoId;
     private String fechaCreacion;
     private String fechaActualizacion;
     private String fechaEliminacion;
 
-    public void setIdIncidencia(int idIncidencia) {
-        this.idIncidencia = idIncidencia;
+    public void setIdViaje(int idViaje) {
+        this.idViaje = idViaje;
     }
 
-    public int getIdIncidencia() {
-        return idIncidencia;
+    public int getIdViaje() {
+        return idViaje;
+    }
+    
+
+    public void setFechaInicio(String fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public String getFechaInicio() {
+        return fechaInicio;
+    }
+    
+
+    public void setFechaFin(String fechaFin) {
+        this.fechaFin = fechaFin;
+    }
+
+    public String getFechaFin() {
+        return fechaFin;
     }
     
 
@@ -36,34 +54,14 @@ public class Incidencia {
         return nombre;
     }
     
-
-    public void setAlumnoId(int alumnoId) {
-        this.alumnoId = alumnoId;
+    public void setPresupuestoId(int presupuestoId) {
+        this.presupuestoId = presupuestoId;
     }
 
-    public int getAlumnoId() {
-        return alumnoId;
-    }
-   
-
-    public void setResponsableId(int responsableId) {
-        this.responsableId = responsableId;
+    public int getPresupuestoId() {
+        return presupuestoId;
     }
 
-    public int getResponsableId() {
-        return responsableId;
-    }
-    
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-    
-    
     public void setFechaCreacion(String fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
@@ -88,4 +86,7 @@ public class Incidencia {
     public String getFechaEliminacion() {
         return fechaEliminacion;
     }
+
+    
+    
 }
