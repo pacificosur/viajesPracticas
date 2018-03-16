@@ -11,14 +11,14 @@ import java.sql.Date;
  *
  * @author slyfe
  */
-public class Contacto {
+public class Direccion {
 
-    public int getIdContacto() {
-        return idContacto;
+    public int getIdDireccion() {
+        return idDireccion;
     }
 
-    public void setIdContacto(int idContacto) {
-        this.idContacto = idContacto;
+    public void setIdDireccion(int idDireccion) {
+        this.idDireccion = idDireccion;
     }
 
     public String getNombre() {
@@ -27,30 +27,6 @@ public class Contacto {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public String getApellidoPaterno() {
-        return apellidoPaterno;
-    }
-
-    public void setApellidoPaterno(String apellidoPaterno) {
-        this.apellidoPaterno = apellidoPaterno;
-    }
-
-    public String getApellidoMaterno() {
-        return apellidoMaterno;
-    }
-
-    public void setApellidoMaterno(String apellidoMaterno) {
-        this.apellidoMaterno = apellidoMaterno;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
     }
 
     public Date getFechaCreación() {
@@ -76,13 +52,9 @@ public class Contacto {
     public void setFechaEliminacion(Date fechaEliminacion) {
         this.fechaEliminacion = fechaEliminacion;
     }
-    private int idContacto;
+    private int idDireccion;
     private String nombre;
-    private String apellidoPaterno;
-    private String apellidoMaterno;
-    private String telefono;
     private Date fechaCreación;
     private Date fechaActualizacion;
     private Date fechaEliminacion;
-    
 }

@@ -11,14 +11,14 @@ import java.sql.Date;
  *
  * @author slyfe
  */
-public class Contacto {
+public class Presupuesto {
 
-    public int getIdContacto() {
-        return idContacto;
+    public int getIdPresupuesto() {
+        return idPresupuesto;
     }
 
-    public void setIdContacto(int idContacto) {
-        this.idContacto = idContacto;
+    public void setIdPresupuesto(int idPresupuesto) {
+        this.idPresupuesto = idPresupuesto;
     }
 
     public String getNombre() {
@@ -29,28 +29,20 @@ public class Contacto {
         this.nombre = nombre;
     }
 
-    public String getApellidoPaterno() {
-        return apellidoPaterno;
+    public String getCiudad() {
+        return ciudad;
     }
 
-    public void setApellidoPaterno(String apellidoPaterno) {
-        this.apellidoPaterno = apellidoPaterno;
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
 
-    public String getApellidoMaterno() {
-        return apellidoMaterno;
+    public String getTransporte() {
+        return transporte;
     }
 
-    public void setApellidoMaterno(String apellidoMaterno) {
-        this.apellidoMaterno = apellidoMaterno;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setTransporte(String transporte) {
+        this.transporte = transporte;
     }
 
     public Date getFechaCreación() {
@@ -76,13 +68,11 @@ public class Contacto {
     public void setFechaEliminacion(Date fechaEliminacion) {
         this.fechaEliminacion = fechaEliminacion;
     }
-    private int idContacto;
+    private int idPresupuesto;
     private String nombre;
-    private String apellidoPaterno;
-    private String apellidoMaterno;
-    private String telefono;
+    private String ciudad;
+    private String transporte;
     private Date fechaCreación;
     private Date fechaActualizacion;
     private Date fechaEliminacion;
-    
 }
