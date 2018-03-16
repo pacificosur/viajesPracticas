@@ -2,96 +2,116 @@ package viajePracticas;
 
 import java.sql.Date;
 
-public class Alumno {
-	 private int idAlumno;
+public class Responsable {
+	 private int idResponsable;
 	 private String nombre;
 	 private String apellidoPaterno;
 	 private String apellidoMaterno;
-	 private String matricula;
-	 private String semestre;
-	 private String carrera;
+	 private String instituto;
 	 private int edad;
 	 private String email;
+	 private String telefono;
+	 private String sexo;
 	 private Date  fechaNacimiento;
 	 private Date  fechaCreacion;
 	 private Date  fechaActualizacion;
 	 private Date  fechaEliminacion;
 	 
-	 public Alumno(){
+	 
+	 public Responsable(){
 		 
 	 }
 
-	public int getIdAlumno() {
-		return idAlumno;
+
+	public int getIdResponsable() {
+		return idResponsable;
 	}
 
-	public void setIdAlumno(int idAlumno) {
-		this.idAlumno = idAlumno;
+
+	public void setIdResponsable(int idResponsable) {
+		this.idResponsable = idResponsable;
 	}
+
 
 	public String getNombre() {
 		return nombre;
 	}
 
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
 
 	public String getApellidoPaterno() {
 		return apellidoPaterno;
 	}
 
+
 	public void setApellidoPaterno(String apellidoPaterno) {
 		this.apellidoPaterno = apellidoPaterno;
 	}
+
 
 	public String getApellidoMaterno() {
 		return apellidoMaterno;
 	}
 
+
 	public void setApellidoMaterno(String apellidoMaterno) {
 		this.apellidoMaterno = apellidoMaterno;
 	}
 
-	public String getMatricula() {
-		return matricula;
+
+	public String getInstituto() {
+		return instituto;
 	}
 
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
+
+	public void setInstituto(String instituto) {
+		this.instituto = instituto;
 	}
 
-	public String getSemestre() {
-		return semestre;
-	}
-
-	public void setSemestre(String semestre) {
-		this.semestre = semestre;
-	}
-
-	public String getCarrera() {
-		return carrera;
-	}
-
-	public void setCarrera(String carrera) {
-		this.carrera = carrera;
-	}
 
 	public int getEdad() {
 		return edad;
 	}
 
+
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+
 
 	public String getEmail() {
 		return email;
 	}
 
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+
+	public String getTelefono() {
+		return telefono;
+	}
+
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
+
+	public String getSexo() {
+		return sexo;
+	}
+
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
 
 	public Date getFechaNacimiento() {
 		return fechaNacimiento;
