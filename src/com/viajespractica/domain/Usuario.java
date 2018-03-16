@@ -1,4 +1,4 @@
-/*------------------------------------------------------------*/
+String-----------------------------------------------------------*/
 /* Autor: Rolando Pedro Gabriel                               */
 /* Fecha: 16/03/2018                                          */
 /* Descripción: Clase para modelar la entidad de Usuario      */
