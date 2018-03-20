@@ -9,6 +9,14 @@ package javaapplication13;
  *
  * @author obdulia
  */
+
+/*------------------------------------------------------*/
+/*Autor : Obdulia Bastida Jiménez                       */
+/*Fecha de modificación: 19 de marzo del 2018           */
+/*Descripción: Tabla Incidencia correspondiente a la   */
+/*especificación de la aplicación web de los viajes     */ 
+/*de practicas de la universidad de la sierra sur       */
+/*------------------------------------------------------*/
 public class Incidencia {
     private int idIncidencia;
     private String nombre;
@@ -18,6 +26,10 @@ public class Incidencia {
     private String fechaCreacion;
     private String fechaActualizacion;
     private String fechaEliminacion;
+    
+    public void Viaje(){
+        
+    }
 
     public void setIdIncidencia(int idIncidencia) {
         this.idIncidencia = idIncidencia;

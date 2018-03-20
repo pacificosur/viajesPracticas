@@ -9,6 +9,13 @@ package javaapplication13;
  *
  * @author obdulia
  */
+/*------------------------------------------------------*/
+/*Autor : Obdulia Bastida Jiménez                       */
+/*Fecha de modificación: 19 de marzo del 2018           */
+/*Descripción: Tabla  Viaje   correspondiente a la      */
+/*especificación de la aplicación web de los viajes     */ 
+/*de practicas de la universidad de la sierra sur       */
+/*------------------------------------------------------*/
 public class Viaje {
     private int idViaje; 
     private String fechaInicio;
@@ -18,6 +25,9 @@ public class Viaje {
     private String fechaCreacion;
     private String fechaActualizacion;
     private String fechaEliminacion;
+    public void Viaje(){
+        
+    }
 
     public void setIdViaje(int idViaje) {
         this.idViaje = idViaje;
