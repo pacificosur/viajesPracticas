@@ -1,4 +1,11 @@
-
+/*------------------------------------------------------*/
+/*Autor : Gracía Pérez Mireya Carmen                    */
+/*Fecha de modificación: 19 de marzo del 2018           */
+/*Descripción: Tabla Hotel con sus atributos          */
+/*correspondiente a la especificación de la aplicación  */
+/* web de viajes  de practicas de la universidad        */ 
+/* de la sierra sur                                     */
+/*------------------------------------------------------*/
 public class Hotel {
 
     private int idHotel;
