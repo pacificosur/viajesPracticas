@@ -1,3 +1,9 @@
+/*------------------------------------------------------------*/
+/* Autor: García García Araceli Edith*/
+/* Fecha: 19/03/2018*/
+/* Descripción: Pojo de la clase Reporte. La cual forma parte de la aplicación Web ViajesPracticas*/
+/*------------------------------------------------------------*/
+
 package viajePracticas;
 
 import java.sql.Date;
