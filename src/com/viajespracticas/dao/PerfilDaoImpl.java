@@ -8,7 +8,7 @@
 
 public class PerfilDaoImpl implements PerfilDao {
 	private Connection connection;
-	private Statement statement;
+	private PrepareStatement statement;
 	private ResultSet resultSet;
 	private String query;
 
@@ -24,7 +24,8 @@ public class PerfilDaoImpl implements PerfilDao {
 
 			while(resultSet.next()){
 				Perfil perfil = new Perfil();
-				perfil.setId(resultSet.getInt("idPerfil");
+				perfil.setId(resultSet.getInt("idPerfil"));
+				perfil.setNombre(resultSet.getString("nombre"));
 
 				listaRegistro.add(perfil);
 			}
@@ -36,3 +37,33 @@ public class PerfilDaoImpl implements PerfilDao {
 			return null;
 		}
 	}
+
+        
+	@Override
+	public Perfil obtenerRegistro(Integer id) {
+		Perfil perfil;
+		try {
+			connection = new Conexion().getConnection();
+			query = "SELECT * FROM Perfil WHERE idPerfil=?";
+
+			statement = connection.prepareStatement(query);
+			statement.setPrepareStatement(1, id);
+
+			resultSet = statement.executeQuery();
+
+			while(resultSet.next()){
+				Perfil perfil = new Perfil();
+				perfil.setId(resultSet.getInt("idPerfil"));
+				perfil.setNombre(resultSet.getString("nombre"));
+
+				listaRegistro.add(perfil);
+			}
+			resultSet.close();
+			statement.close();
+			connection.close();
+			return listaRegistro;
+		} catch(Exception e) {
+			return null;
+		}
+
+
