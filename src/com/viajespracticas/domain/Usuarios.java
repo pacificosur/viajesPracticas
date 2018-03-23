@@ -1,7 +1,7 @@
-String-----------------------------------------------------------*/
+/*------------------------------------------------------------*/
 /* Autor: Rolando Pedro Gabriel                               */
 /* Fecha: 16/03/2018                                          */
-/* Descripción: Clase para modelar la entidad de Usuario      */
+/* DescripciÃ³n: Clase para modelar la entidad de Usuario      */
 /* Correo: rolando.pedro.gabriel@gmail.com                    */
 /*------------------------------------------------------------*/
 
@@ -30,7 +30,7 @@ public class Usuario {
 	}
 
 
-	// Implementación de los GET's y SET's
+	// ImplementaciÃ³n de los GET's y SET's
 	public int getIdUsuario(){
 		return this.idUsuario;
 	}
