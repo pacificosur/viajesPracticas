@@ -1,6 +1,7 @@
 /*------------------------------------------------------------*/
 /* Autor: Rolando Pedro Gabriel                               */
-/* Fecha: 16/03/2018                                          */
+/* Fecha Creación: 16/03/2018                                 */
+/* Fecha Modificación: 23/03/2018                             */
 /* Descripción: Clase para modelar la entidad de Usuario      */
 /* Correo: rolando.pedro.gabriel@gmail.com                    */
 /*------------------------------------------------------------*/
@@ -18,7 +19,7 @@ public class Usuario {
 	private pass;
 	private String telefono;
 	private String direccion;
-	
+
 	private Date fechaCreacion;
 	private Date fechaActualizacion;
 	private Date fechaEliminacion;
@@ -39,7 +40,7 @@ public class Usuario {
 					this.idUsuario = id;
 	}
 
-	
+
 	public String getApellidoPaterno(){
 		return this.apellidoPaterno;
 	}
@@ -56,7 +57,7 @@ public class Usuario {
 					this.apellidoMaterno = apellido;
 	}
 
-	
+
 	public Date getFechaNacimiento(){
 		return this.fechaNacimiento;
 	}
@@ -64,7 +65,7 @@ public class Usuario {
 	public void setFechaNacimiento(Date fecha){
 					this.fechaNacimiento = fecha;
 	}
-	
+
 	public String getEmail(){
 		return this.email;
 	}
@@ -72,7 +73,7 @@ public class Usuario {
 	public void setEmail(String email){
 		this.email = email;
 	}
-	
+
 	public String getSexo(){
 		return this.sexo;
 	}
@@ -80,7 +81,7 @@ public class Usuario {
 	public void setSexo(Srtring sexo){
 					this.sexo = sexo;
 	}
-	
+
 	public String getUsr(){
 		return this.usr;
 	}
@@ -88,7 +89,7 @@ public class Usuario {
 	public void setUsr(String usr){
 					this.usr = usr;
 	}
-	
+
 	public String getPass(){
 		return this.pass;
 	}
@@ -121,7 +122,7 @@ public class Usuario {
 		this.fechaCreacion = fechaCreacion;
 	}
 
-	
+
 	public Date getFechaActualizacion(){
 		return this.fechaActualizacion;
 	}
