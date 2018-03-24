@@ -2,30 +2,30 @@
 /* Autor: Rolando Pedro Gabriel                               */
 /* Fecha: 23/03/2018                                          */
 /* Correo: rolando.pedro.gabriel@gmail.com                    */
-/* Descripción: Clase para modelar la implementación Usuario  */
+/* Descripción: Clase para modelar la implementación Perfil   */
 /*------------------------------------------------------------*/
 
-public class UsuarioDaoImpl implements UsuarioDao {
+public class PerfilDaoImpl implements PerfilDao {
 	private Connection connection;
 	private Statement statement;
 	private ResultSet resultSet;
 	private String query;
 
 	@Override
-	public List<Usuario> obtenerRegistros() {
-		ArrayList<Usuario> listaRegistro = new ArrayList<>();
+	public List<Perfil> obtenerRegistros() {
+		ArrayList<Perfil> listaRegistro = new ArrayList<>();
 		try {
 			connection = new Conexion().getConnection();
-			query = "SELECT * FROM Usuario";
+			query = "SELECT * FROM Perfil";
 
 			statement = connection.createStatement();
 			resultSet = statement.executeQuery(query);
 
 			while(resultSet.next()){
-				Usuario usuario = new Usuario();
-				usuario.setId(resultSet.getInt("idUsuario");
+				Perfil perfil = new Perfil();
+				perfil.setId(resultSet.getInt("idPerfil");
 
-				listaRegistro.add(usuario);
+				listaRegistro.add(perfil);
 			}
 			resultSet.close();
 			statement.close();

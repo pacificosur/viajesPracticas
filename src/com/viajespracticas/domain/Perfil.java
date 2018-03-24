@@ -1,4 +1,4 @@
-/**-----------------------------------------------------------*/
+/*------------------------------------------------------------*/
 /* Autor: Rolando Pedro Gabriel                               */
 /* Fecha: 16/03/2018                                          */
 /* Descripción: Clase para modelar la entidad de Perfil       */
@@ -18,7 +18,7 @@ public class Perfil {
 	public int getIdPerfil(){
 		return this.idPerfil;
 	}
-	
+
 	public void setIdPerfil(int idPerfil){
 		this.idPerfil = idPerfil;
 	}
