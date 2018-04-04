@@ -1,11 +1,13 @@
 /*------------------------------------------------------------*/
 /*Autor : Gracía Pérez Mireya Carmen                          */
 /*Fecha de Creación: 28 de marzo del 2018                     */
-/*Fecha de modificación: 2 de abril del 2018                  */
+/*Fecha de modificación: 3 de abril del 2018                  */
+/* Correo Electrónico: mire12car34@gmail.com                  */
 /*Descripción: interfaz de la hotelDaoImpl con sus métodos    */
 /*par la inserisión, actualización y eliminación de los datos */
 /*a la base de datos                                          */
 /*------------------------------------------------------------*/
+
 public class HotelDaoImpl implements HotelDao{
 	private Connection connection;
 	private PrepareStatement statement;
@@ -69,10 +71,7 @@ public class HotelDaoImpl implements HotelDao{
 				hotel.setFechaEliminacion(resultSet.getString("fechaEliminacion"));
 
 				listaRegistro.add(hotel);
-			/*
- idHotel, nombre, direccionId, numerocuartos, servicios, costo, telefono, correoElectronico, sitioWeb,director, fechaCreacion, fechaAtualizacion, fechaEliminacion;
-
-*/
+			
 			}
 
 			resulSet.close();
@@ -99,19 +98,19 @@ public class HotelDaoImpl implements HotelDao{
 
 			statement = connection.PrepareStatement(query);
 			//resultSet = PrepareStatement.executeQuery(query);
-			statement.setString(1, idHotel);
-        	statement.setString(2, nombre);
-        	statement.setString(3, direccionId);
-        	statement.setString(4, numerocuartos);
-        	statement.setString(5, servicios);
-        	statement.setString(6, costo);
-        	statement.setString(7, telefono);
-        	statement.setString(8, correoElectronico);
-        	statement.setString(9, sitioWeb);
-        	statement.setString(10, director);
-        	statement.setString(11, fechaCreacion);
-        	statement.setString(12, fechaAtualizacion);
-        	statement.setString(13, fechaEliminacion);
+			statement.setString(1, hotel.idHotel);
+        		statement.setString(2, hotel.nombre);
+        		statement.setString(3, hotel.direccionId);
+        		statement.setString(4, hotel.numerocuartos);
+        		statement.setString(5, hotel.servicios);
+        		statement.setString(6, hotel.costo);
+        		statement.setString(7, hotel.telefono);
+        		statement.setString(8, hotel.correoElectronico);
+        		statement.setString(9, hotel.sitioWeb);
+        		statement.setString(10, hotel.director);
+        		statement.setString(11, hotel.fechaCreacion);
+        		statement.setString(12, hotel.fechaAtualizacion);
+        		statement.setString(13, hotel.fechaEliminacion);
 
 			resultSet =statement.executeUpdate();
 
@@ -137,18 +136,18 @@ public class HotelDaoImpl implements HotelDao{
 
         	statement = connection.PrepareStatement(query);
         	
-        	statement.setString(1, nombre);
-        	statement.setString(2, direccionId);
-        	statement.setString(3, numerocuartos);
-        	statement.setString(4, servicios);
-        	statement.setString(5, costo);
-        	statement.setString(6, telefono);
-        	statement.setString(7, correoElectronico);
-        	statement.setString(8, sitioWeb);
-        	statement.setString(9, director);
-        	statement.setString(10, fechaCreacion);
-        	statement.setString(11, fechaAtualizacion);
-        	statement.setString(12, fechaEliminacion);	
+        	statement.setString(1, hotel.nombre);
+        	statement.setString(2, hotel.direccionId);
+        	statement.setString(3, hotel.numerocuartos);
+        	statement.setString(4, hotel.servicios);
+        	statement.setString(5, hotel.costo);
+        	statement.setString(6, hotel.telefono);
+        	statement.setString(7, hotel.correoElectronico);
+        	statement.setString(8, hotel.sitioWeb);
+        	statement.setString(9, hotel.director);
+        	statement.setString(10, hotel.fechaCreacion);
+        	statement.setString(11, hotel.fechaAtualizacion);
+        	statement.setString(12, hotel.fechaEliminacion);	
 
         	resultSet =statement.executeUpdate();
 
@@ -164,15 +163,16 @@ public class HotelDaoImpl implements HotelDao{
 
 	@Override
 	public void eliminarRegistro(Integer id){
+		Hotel hotel;
 		try{
 			connection =new Conexion().getConnection();
 			query = "DELETE FROM Hotel WHERE idHotel = ?";
 
-        	statement = connection.PrepareStatement(query);
+        		statement = connection.PrepareStatement(query);
         	         
-        	statement.setString(1, idHotel);	
+        		statement.setString(1, hotel.idHotel);	
 
-        	resultSet =statement.executeUpdate();
+        		resultSet =statement.executeUpdate();
 
 			resulSet.close();
 			statement.close();

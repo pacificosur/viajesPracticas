@@ -1,11 +1,13 @@
 /*------------------------------------------------------------*/
 /*Autor : Gracía Pérez Mireya Carmen                          */
 /*Fecha de Creación: 28 de marzo del 2018                     */
-/*Fecha de modificación: 2 de abril del 2018                  */
+/*Fecha de modificación: 3 de abril del 2018                  */
+/*Correo Electronico: mire12car34@gmail.com                   */
 /*Descripción: interfaz de la EmpresaDao con sus métodos      */
 /*par la inserisión, actualización y eliminación de los datos */
 /*a la base de datos                                          */
 /*------------------------------------------------------------*/
+
 public class EmpresaDaoImpl implements EmpresaDao{
 	private Connection connection;
 	private PrepareStatement statement;
@@ -81,7 +83,9 @@ public class EmpresaDaoImpl implements EmpresaDao{
 
 	@Override
 	public void crearRegistro(Empresa empresa){
-        Empresa empresa;
+        	
+		Empresa empresa;
+		
 		try{
 			connection =new Conexion().getConnection();
 			query = "INSERT INTO Empresa (idEmpresa, nombre, categoria, gerente, direccionId, contactoId," 
@@ -89,15 +93,15 @@ public class EmpresaDaoImpl implements EmpresaDao{
 
 			statement = connection.PrepareStatement(query);
 			//resultSet = PrepareStatement.executeQuery(query);
-			statement.setString(1, idEmpresa);
-        	statement.setString(2, nombre);
-        	statement.setString(3, categoria);
-        	statement.setString(4, gerente);
-        	statement.setString(5, direccionId);
-        	statement.setString(6, contactoId);
-        	statement.setString(7, fechaCreacion);
-        	statement.setString(8, fechaAtualizacion);
-        	statement.setString(9, fechaEliminacion);
+			statement.setString(1, empresa.idEmpresa);
+        		statement.setString(2, empresa.nombre);
+        		statement.setString(3, empresa.categoria);
+        		statement.setString(4, empresa.gerente);
+        		statement.setString(5, empresa.direccionId);
+        		statement.setString(6, empresa.contactoId);
+        		statement.setString(7, empresa.fechaCreacion);
+        		statement.setString(8, empresa.fechaAtualizacion);
+        		statement.setString(9, empresa.fechaEliminacion);
 
 			resultSet =statement.executeUpdate();
 
@@ -115,23 +119,24 @@ public class EmpresaDaoImpl implements EmpresaDao{
 
 	@Override
 	public void actualizarRegistro(Empresa empresa){
+		
 		try{
 			connection =new Conexion().getConnection();
 			query = "UPDATE Empresa SET nombre=?, categoria=?, gerente=?, direccionId=?, contactoId=?, fechaCreacion=?, fechaAtualizacion=?, fechaEliminacion=? "
                     + "WHERE idEmpresa=?";
 
-        	statement = connection.PrepareStatement(query);
+        		statement = connection.PrepareStatement(query);
         	
-        	statement.setString(1, nombre);
-        	statement.setString(2, categoria);
-        	statement.setString(3, gerente);
-        	statement.setString(4, direccionId);
-        	statement.setString(5, contactoId);
-        	statement.setString(6, fechaCreacion);
-        	statement.setString(7, fechaAtualizacion);
-        	statement.setString(8, fechaEliminacion);	
+        		statement.setString(1, empresa.nombre);
+        		statement.setString(2, empresa.categoria);
+        		statement.setString(3, empresa.gerente);
+        		statement.setString(4, empresa.direccionId);
+        		statement.setString(5, empresa.contactoId);
+        		statement.setString(6, empresa.fechaCreacion);
+        		statement.setString(7, empresa.fechaAtualizacion);
+        		statement.setString(8, empresa.fechaEliminacion);	
 
-        	resultSet =statement.executeUpdate();
+        		resultSet =statement.executeUpdate();
 
 			resulSet.close();
 			statement.close();
@@ -145,15 +150,18 @@ public class EmpresaDaoImpl implements EmpresaDao{
 
 	@Override
 	public void eliminarRegistro(Integer id){
+		
+		Empresa empresa;
+
 		try{
 			connection =new Conexion().getConnection();
 			query = "DELETE FROM Empresa WHERE idEmpresa = ?";
 
-        	statement = connection.PrepareStatement(query);
+        		statement = connection.PrepareStatement(query);
         	         
-        	statement.setString(1, idEmpresa);	
+        		statement.setString(1, empresa.idEmpresa);	
 
-        	resultSet =statement.executeUpdate();
+        		resultSet =statement.executeUpdate();
 
 			resulSet.close();
 			statement.close();
