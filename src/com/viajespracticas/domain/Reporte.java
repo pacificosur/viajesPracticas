@@ -4,15 +4,12 @@
 /* Descripción: Pojo de la clase Reporte. La cual forma parte de la aplicación Web ViajesPracticas*/
 /*------------------------------------------------------------*/
 
-package viajePracticas;
-
-import java.sql.Date;
-
 public class Reporte {
-	 private int idReporte;
+    private int idReporte;
 	 private String nombre;
 	 private int alumnoId;
 	 private int responsableId;
+         private String descripcion;
 	 private Date  fechaCreacion;
 	 private Date  fechaActualizacion;
 	 private Date  fechaEliminacion;
@@ -52,7 +49,13 @@ public class Reporte {
 	public void setResponsableId(int responsableId) {
 		this.responsableId = responsableId;
 	}
+        public String getDescripcion() {
+		return descripcion;
+	}
 
+	public void setDescripcion(String descripcion ) {
+		this.descripcion = this.descripcion;
+	}
 
 	public Date getFechaCreacion() {
 		return fechaCreacion;
@@ -83,4 +86,3 @@ public class Reporte {
 		this.fechaEliminacion = fechaEliminacion;
 	}
 }
-

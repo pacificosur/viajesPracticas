@@ -1,7 +1,8 @@
-
-
-
-
+/*------------------------------------------------------------*/
+/* Autor: García García Araceli Edith*/
+/* Fecha: 30/03/2018*/
+/* Descripción: CRUD de la entidad Alumno del proyecto viajesPracticas*/
+/*------------------------------------------------------------*/
 
 public interface AlumnoDao{
 	public List<Alumno> obtenerRegistros();

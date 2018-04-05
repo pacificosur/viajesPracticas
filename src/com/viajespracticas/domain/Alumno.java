@@ -4,12 +4,9 @@
 /* Descripción: Pojo de la clase Alumno. La cual forma parte de la aplicación Web ViajesPracticas*/
 /*------------------------------------------------------------*/
 
-package viajePracticas;
-
-import java.sql.Date;
-
-public class Alumno {
-	 private int idAlumno;
+class Alumno {
+    
+     private int idAlumno;
 	 private String nombre;
 	 private String apellidoPaterno;
 	 private String apellidoMaterno;
@@ -17,7 +14,7 @@ public class Alumno {
 	 private String semestre;
 	 private String carrera;
 	 private int edad;
-	 private String email;
+	 private String correoElectronico;
 	 private Date  fechaNacimiento;
 	 private Date  fechaCreacion;
 	 private Date  fechaActualizacion;
@@ -91,12 +88,12 @@ public class Alumno {
 		this.edad = edad;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getCorreoElectronico() {
+		return correoElectronico;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmail(String correoElectronico) {
+		this.correoElectronico = this.correoElectronico;
 	}
 
 	public Date getFechaNacimiento() {
@@ -138,4 +135,3 @@ public class Alumno {
 		this.fechaEliminacion = fechaEliminacion;
 	}
 }
-

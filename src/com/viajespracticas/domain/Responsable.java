@@ -4,19 +4,14 @@
 /* Descripción: Pojo de la clase Responsable. La cual forma parte de la aplicación Web ViajesPracticas*/
 /*------------------------------------------------------------*/
 
-
-package viajePracticas;
-
-import java.sql.Date;
-
 public class Responsable {
-	 private int idResponsable;
+    private int idResponsable;
 	 private String nombre;
 	 private String apellidoPaterno;
 	 private String apellidoMaterno;
 	 private String instituto;
 	 private int edad;
-	 private String email;
+	 private String correoElectronico;
 	 private String telefono;
 	 private String sexo;
 	 private Date  fechaNacimiento;
@@ -90,13 +85,13 @@ public class Responsable {
 	}
 
 
-	public String getEmail() {
-		return email;
+	public String getCorreoElectronico() {
+		return correoElectronico;
 	}
 
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setCorreoelectronico(String email) {
+		this.correoElectronico = correoElectronico;
 	}
 
 
@@ -159,4 +154,3 @@ public class Responsable {
 		this.fechaEliminacion = fechaEliminacion;
 	}
 }
-
