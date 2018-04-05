@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reporte</title>
+	<style>
+		table{border: 1px solid black;/* borde para toda la tabla */
+			border-collapse: collapse;/* quitar el  margen a cada celda para que sea una sola  */
+			width: 80%;/* medida porcentual o fija */
+			margin: 0 auto;
+			
+			/*border-spacing: 10px;/*espacio entre celdas como el  margin */
+			empty-cells: hide;/* una columna vacia la deja asi, deja su espacio*/
+			/*background: url(noche.jpg);*/
+		}
+		table caption{font-size:3em;color:#640712;}
+		table td{border:1px solid black;/*borde a cada elemento de la tabla  */
+			padding: 10px; text-align: center;}
+
+		table th{border:1px solid black;padding: 10px;background: black;color:white;
+			font-weight: bolder;/* en negritas*/
+		}
+		table tr:nth-child(odd){background: #92DE8D;}
+		table tr:nth-child(even){background: #00FFFF;}
+		table tr:hover{background: #0000FF}/* cuando se pasa el cursor   se aplica a toda una fila  con td se aplica a una sola columna */
+		#agregar{background: black;	color: white;}
+
+
+	</style>
+
+</head>
+<body>
+<table>
+<caption>REPORTES</caption><!-- titulo de la tabla por default se pone en la parte superior -->
+	<tr>
+		
+			<th>Id</th><!-- encabezado de la tabla -->
+			<th>Nombre</th><!-- colspan se esta ampliando a que utilice 5 columnas -->
+			<th>Id del Alumno</th>
+			<th>Id del responsable</th>
+			<th>Descripción</th>
+			<th>Actualizar</th>
+			<th>Eliminar</th>
+
+
+	</tr>
+	
+	<tr>
+	<td>1</td>
+	<td>Viaje al INEGI</td>
+	<td>1</td>
+	<td>null</td>
+	<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis consequuntur dolore, ullam obcaecati tempora, est mollitia reprehenderit. Aperiam ullam, ab possimus repellat dignissimos repellendus eligendi, quod magni tempore ipsa vitae.</td>
+	<td ><button>Actualizar</button></td>
+	<td ><button>Eliminar</button></td>	
+	</tr>
+	<tr>
+	<td>1</td>
+	<td>Viaje al INEGI</td>
+	<td>1</td>
+	<td>null</td>
+	<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis consequuntur dolore, ullam obcaecati tempora, est mollitia reprehenderit. Aperiam ullam, ab possimus repellat dignissimos repellendus eligendi, quod magni tempore ipsa vitae.</td>
+	<td ><button>Actualizar</button></td>
+	<td ><button>Eliminar</button></td>	
+	</tr>
+	<tr>
+	<td>1</td>
+	<td>Viaje al INEGI</td>
+	<td>1</td>
+	<td>null</td>
+	<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis consequuntur dolore, ullam obcaecati tempora, est mollitia reprehenderit. Aperiam ullam, ab possimus repellat dignissimos repellendus eligendi, quod magni tempore ipsa vitae.</td>
+	<td ><button>Actualizar</button></td>
+	<td ><button>Eliminar</button></td>	
+	</tr>
+	<tr>
+	<td>1</td>
+	<td>Viaje al INEGI</td>
+	<td>1</td>
+	<td>null</td>
+	<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis consequuntur dolore, ullam obcaecati tempora, est mollitia reprehenderit. Aperiam ullam, ab possimus repellat dignissimos repellendus eligendi, quod magni tempore ipsa vitae.</td>
+	<td ><button>Actualizar</button></td>
+	<td ><button>Eliminar</button></td>	
+	</tr>
+	<tr>
+	<td>1</td>
+	<td>Viaje al INEGI</td>
+	<td>1</td>
+	<td>null</td>
+	<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis consequuntur dolore, ullam obcaecati tempora, est mollitia reprehenderit. Aperiam ullam, ab possimus repellat dignissimos repellendus eligendi, quod magni tempore ipsa vitae.</td>
+	<td ><button>Actualizar</button></td>
+	<td ><button>Eliminar</button></td>	
+	</tr>
+	<tr>
+	<td>1</td>
+	<td>Viaje al INEGI</td>
+	<td>1</td>
+	<td>null</td>
+	<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis consequuntur dolore, ullam obcaecati tempora, est mollitia reprehenderit. Aperiam ullam, ab possimus repellat dignissimos repellendus eligendi, quod magni tempore ipsa vitae.</td>
+	<td ><button>Actualizar</button></td>
+	<td ><button>Eliminar</button></td>	
+	</tr>
+</table>
+	
+
+<button id="agregar">Agregar</button>
+
+</body>
+</html>

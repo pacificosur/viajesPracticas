@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Responsable</title>
+	<style>
+		table{border: 1px solid black;/* borde para toda la tabla */
+			border-collapse: collapse;/* quitar el  margen a cada celda para que sea una sola  */
+			width: 80%;/* medida porcentual o fija */
+			margin: 0 auto;
+			
+			/*border-spacing: 10px;/*espacio entre celdas como el  margin */
+			empty-cells: hide;/* una columna vacia la deja asi, deja su espacio*/
+			/*background: url(noche.jpg);*/
+		}
+		table caption{font-size:3em;color:#640712;}
+		table td{border:1px solid black;/*borde a cada elemento de la tabla  */
+			padding: 10px; text-align: center;}
+
+		table th{border:1px solid black;padding: 10px;background: black;color:white;
+			font-weight: bolder;/* en negritas*/
+		}
+		table tr:nth-child(odd){background: #92DE8D;}
+		table tr:nth-child(even){background: #00FFFF;}
+		table tr:hover{background: #0000FF}/* cuando se pasa el cursor   se aplica a toda una fila  con td se aplica a una sola columna */
+		#agregar{background: black;	color: white;}
+
+
+	</style>
+
+</head>
+<body>
+<table>
+<caption>RESPONSABLES</caption><!-- titulo de la tabla por default se pone en la parte superior -->
+	<tr>
+		
+			<th>Id</th><!-- encabezado de la tabla -->
+			<th>Nombre</th><!-- colspan se esta ampliando a que utilice 5 columnas -->
+			<th>Apellido Paterno</th>
+			<th>Apellido Materno</th>
+			<th>Instituto</th>
+			<th>Edad</th>
+			<th>Correo electrónico</th>
+			<th>Teléfono</th>
+			<th>Sexo</th>
+			<th>Fecha de Nacimiento</th>
+			<th>Actualizar</th>
+			<th>Eliminar</th>
+
+
+	</tr>
+	
+	<tr><!-- una fila de  la tabla -->
+	<td>1</td>
+	<td>Luis</td>
+	<td>Cortes</td>
+	<td>Cruz</td>
+	<td>Municipales</td>
+	<td>32</td>	
+	<td >luis.cortes@gmail.com</td>
+	<td >951245875</td>
+	<td >Masculino</td>
+	<td >10/08/1995</td>
+	<td ><button>Actualizar</button></td>
+	<td ><button>Eliminar</button></td>	
+	</tr>
+	<tr><!-- una fila de  la tabla -->
+	<td>1</td>
+	<td>Luis</td>
+	<td>Cortes</td>
+	<td>Cruz</td>
+	<td>Municipales</td>
+	<td>32</td>	
+	<td >luis.cortes@gmail.com</td>
+	<td >951245875</td>
+	<td >Masculino</td>
+	<td >10/08/1995</td>
+	<td ><button>Actualizar</button></td>
+	<td ><button>Eliminar</button></td>	
+	</tr> 	
+	<tr><!-- una fila de  la tabla -->
+	<td>1</td>
+	<td>Luis</td>
+	<td>Cortes</td>
+	<td>Cruz</td>
+	<td>Municipales</td>
+	<td>32</td>	
+	<td >luis.cortes@gmail.com</td>
+	<td >951245875</td>
+	<td >Masculino</td>
+	<td >10/08/1995</td>
+	<td ><button>Actualizar</button></td>
+	<td ><button>Eliminar</button></td>	
+	</tr>
+	<tr><!-- una fila de  la tabla -->
+	<td>1</td>
+	<td>Luis</td>
+	<td>Cortes</td>
+	<td>Cruz</td>
+	<td>Municipales</td>
+	<td>32</td>	
+	<td >luis.cortes@gmail.com</td>
+	<td >951245875</td>
+	<td >Masculino</td>
+	<td >10/08/1995</td>
+	<td ><button>Actualizar</button></td>
+	<td ><button>Eliminar</button></td>	
+	</tr>
+	<tr><!-- una fila de  la tabla -->
+	<td>1</td>
+	<td>Luis</td>
+	<td>Cortes</td>
+	<td>Cruz</td>
+	<td>Municipales</td>
+	<td>32</td>	
+	<td >luis.cortes@gmail.com</td>
+	<td >951245875</td>
+	<td >Masculino</td>
+	<td >10/08/1995</td>
+	<td ><button>Actualizar</button></td>
+	<td ><button>Eliminar</button></td>	
+	<tr><!-- una fila de  la tabla -->
+	<td>1</td>
+	<td>Luis</td>
+	<td>Cortes</td>
+	<td>Cruz</td>
+	<td>Municipales</td>
+	<td>32</td>	
+	<td >luis.cortes@gmail.com</td>
+	<td >951245875</td>
+	<td >Masculino</td>
+	<td >10/08/1995</td>
+	<td ><button>Actualizar</button></td>
+	<td ><button>Eliminar</button></td>	
+	</tr>
+</table>
+	
+
+<button id="agregar">Agregar</button>
+
+</body>
+</html>
