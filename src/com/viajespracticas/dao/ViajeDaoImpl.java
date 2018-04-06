@@ -1,4 +1,4 @@
-/*------------------------------------------------------------*/
+﻿/*------------------------------------------------------------*/
 /*			Universidad de la Sierra Sur			   		  */
 /*Autor:Bastida Jiménez Obdulia								  */								  
 /*Fecha de ceración: 31 de marzo 2018   					  */
@@ -51,7 +51,7 @@ public class ViajeDaoImpl implements ViajeDao{
 		Viaje viaje;
 		try{
 			connection = new Connection().getConnection();
-			query = "SELECT * FROM Viaje WHERE idPerfil=?";
+			query = "SELECT * FROM Viaje WHERE idViaje=?";
 
 			statement = connection.createStatement();
 			statement.setPrepare
@@ -83,11 +83,21 @@ public class ViajeDaoImpl implements ViajeDao{
 		Viaje viaje;
 		try{
 			connection = new Connection().getConnection();
-			query = "INSERT INTO Viaje values("+idViaje+", '"+fechaInicio+"', '"+fechaFin+"', '"+nombre+"', "+presupuesto+", '"+fechaCreacion+"', '"+fechaModificacion+"', '"+fechaEliminacion+"');";
+			query = "INSERT INTO Viaje(idViaje, fechaInicio, fechaFin, nombre, presupuesto, fechaCreacion, fechaModificacion, fechaEliminacion)"
+			+"values(?,?,?,?,?,?,?,?)";
 
-			statement = connection.createStatement();
+			statement = connection.prepareStatement();
+			statement.setInt(1, viaje.getIdViaje());
+			statement.setDate(2, (Date)viaje.getFechaInico());
+			statement.setDate(3, (Date)viaje.getFechaFin());
+			statement.setString(4, viaje.getNombre());
+			statement.setInt(5, viaje.getPresupuesto());
+			statement.setDate(6, (Date)viaje.getFechaCreacion());
+			statement.setDate(7, (Date)viaje.getFechaModificacon());
+			statement.setDate(8, (Date)viaje.getFechaEliminacion());
+
 			statement.executeUpdate(query);
-
+			resultSet.close();
 			statement.close();
 			connection.close();
 			
@@ -100,11 +110,21 @@ public class ViajeDaoImpl implements ViajeDao{
 		Viaje viaje;
 		try{
 			connection = new Connection().getConnection();
-			query = "UPDATE Viaje set fechaInicio='"+fechaInicio+"', set fechaFin='"+fechaFin+"set nombre= '"+nombre+"', set presupuesto="+presupuesto+", set fechaCreacion'"+fechaCreacion+"', set FechaModificacion='"+fechaModificacion+"', setFechaEliminacion'"+fechaEliminacion+"' where idViaje="+idViaje+";";
+			query = "UPDATE Viaje set fechaInicio=?, fechaFin=?, nombre=?, presupuesto=?, fechaCreacion=?, set FechaModificacion=?, setFechaEliminacion=? where idViaje=?;";
 
 			statement = connection.createStatement();
+			statement.setDate(1, (Date)viaje.getFechaInico());
+			statement.setDate(2, (Date)viaje.getFechaFin());
+			statement.setString(3, viaje.getNombre());
+			statement.setInt(4, viaje.getPresupuesto());
+			statement.setDate(5, (Date)viaje.getFechaCreacion());
+			statement.setDate(6, (Date)viaje.getFechaModificacon());
+			statement.setDate(7,(Date) viaje.getFechaEliminacion());
+			statement.setInt(8, viaje.getIdViaje());
+
 			statement.executeUpdate(query);
 
+			resultSet.close();
 			statement.close();
 			connection.close();
 			
@@ -116,11 +136,13 @@ public class ViajeDaoImpl implements ViajeDao{
 		Viaje viaje;
 		try{
 			connection = new Connection().getConnection();
-			query = "DELETE from Viaje where idViaje="+idViaje+";";
+			query = "DELETE from Viaje where idViaje=?;";
 
 			statement = connection.createStatement();
+			statement.setInt(1, id);
 			statement.executeUpdate(query);
 
+			resultSet.close();
 			statement.close();
 			connection.close();
 			

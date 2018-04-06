@@ -1,4 +1,4 @@
-/*------------------------------------------------------------*/
+﻿/*------------------------------------------------------------*/
 /*			Universidad de la Sierra Sur			   		  */
 /*Autor:Bastida Jiménez Obdulia								  */								  
 /*Fecha de ceración: 31 de marzo 2018   					  */
@@ -11,7 +11,7 @@
 
 public class IncidenciaDaoImpl implements IncidenciaDao{
 	private Connection connection;
-	private PrepareStatement statement;
+	private PrepareStatement declaracion;
 	private ResultSet resultSet;
 	private String query;
 
@@ -85,11 +85,27 @@ public class IncidenciaDaoImpl implements IncidenciaDao{
 		Incidencia incidencia;
 		try{
 			connection = new Connection().getConnection();
-			query = "INSERT INTO Incidencia values("+idIcidencia+", '"+nombre+"', "+alumno+", "+responsable+", '"+descripcion+"', '"+fechaCreacion+"', '"+fechaModificacion+"', '"+fechaEliminacion+"');";
+			
 
-			statement = connection.createStatement();
+		query =  " INSERT INTO Incidencia (idIcidencia, nombre, alumno, responsable, descripcion, fechaCreacion, fechaModificacion, fechaEliminacion) " 
+		+  " VALUES (?,?,?,?,?,?,?,?) " ;
+
+			declaración =  conexión . PrepareStatement (consulta);
+		
+
+			declaración.setInt ( 1 , incidencia.getIdIncidencia());
+        	declaración.setString ( 2 , incidencia.getNombre());
+        	declaración.setInt ( 3 , incidencia.getAlumno());
+        	declaración.setInt ( 4 , incidencia.getResponsable());
+        	declaración.setString ( 5 , incidencia.getDescripcion());
+        	declaración.setString ( 6 , (Date)incidencia.getFechaCreacion());
+        	declaración.setString ( 7 , (Date)incidencia.getFechaAtualizacion());
+        	declaración.setString ( 8 , (Date)incidencia.getFechaEliminacion());
+
+
+			
 			statement.executeUpdate(query);
-
+			resultSet.close();
 			statement.close();
 			connection.close();
 			
@@ -102,11 +118,20 @@ public class IncidenciaDaoImpl implements IncidenciaDao{
 		Incidencia incidencia;
 		try{
 			connection = new Connection().getConnection();
-			query = "UPDATE Incidencia set nombre= '"+nombre+"', set alumno="+alumno+", set responsable="+responsable+", set descripcion='"+descripcion+"', set fechaCreacion'"+fechaCreacion+"', set FechaModificacion='"+fechaModificacion+"', setFechaEliminacion'"+fechaEliminacion+"' where idIncidencia="+idIncidencia+";";
+			query = "UPDATE Incidencia set nombre=?, alumno=?, responsable=?, descripcion=?, fechaCreacion=?, FechaModificacion=?, FechaEliminacion=? where idIncidencia=?";
 
+        	declaración.setString (1 , incidencia.getNombre());
+        	declaración.setInt (2 , incidencia.getAlumno());
+        	declaración.setInt (3 , incidencia.getResponsable());
+        	declaración.setString (4 , incidencia.getDescripcion());
+        	declaración.setString (5 , (Date)incidencia.getFechaCreacion());
+        	declaración.setString (6 , (Date)incidencia.getFechaAtualizacion());
+        	declaración.setString (7 , (Date)incidencia.getFechaEliminacion());
+        	declaración.setInt (8 , incidencia.getIdIncidencia());
+		
 			statement = connection.createStatement();
 			statement.executeUpdate(query);
-
+			resultSet.close();
 			statement.close();
 			connection.close();
 			
@@ -114,15 +139,21 @@ public class IncidenciaDaoImpl implements IncidenciaDao{
 			return null;
 		}
 	}
+
+
 	public List<Incidencia> eliminarRegistro(Integer id){
 		Incidencia incidencia;
 		try{
 			connection = new Connection().getConnection();
-			query = "DELETE from Incidencia where idIncidencia="+idIncidencia+";";
+			query = "DELETE from Incidencia where idIncidencia=?";
+			
+			statement.setString(1, idIncidencia);
 
 			statement = connection.createStatement();
+			statement.setInt(1, id);
 			statement.executeUpdate(query);
 
+			resultSet.close();
 			statement.close();
 			connection.close();
 			
